@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Finance & Assets | Privacy Policy</title>
+<link rel="icon" type="image/x-icon" href="latest favicon.jpg">
+<style>
+  :root {
+    --primary: #ADFF2F; 
+    --bg: #0c121c;
+    --text: #f4f4f4;
+    --muted: #c3c6c9;
+    --card: #131a26;
+    --border: rgba(255,255,255,0.1);
+  }
+
+  body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: black;
+    color: var(--text);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+  }
+
+ nav {
+    background-color: #0f172a;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 24px;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  }
+
+  .logo {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: var(--primary);
+    letter-spacing: 0.6px;
+  }
+
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 26px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav-links li {
+    display: inline-block;
+  }
+
+  .nav-links a {
+    text-decoration: none;
+    color: var(--text);
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 8px 12px;
+    border-radius: 6px;
+    transition: 0.3s;
+  }
+
+  .nav-links a:hover {
+    background-color: var(--hover);
+    color: var(--primary);
+  }
+
+  .menu-icon {
+    display: none;
+    font-size: 1.6rem;
+    cursor: pointer;
+    color: var(--primary);
+  }
+
+  @media (max-width: 768px) {
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      background-color: #111a2c;
+      position: absolute;
+      top: 60px;
+      right: 0;
+      width: 200px;
+      border-radius: 0 0 8px 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+    }
+
+    .nav-links.active {
+      display: flex;
+    }
+
+    .menu-icon {
+      display: block;
+    }
+
+  header {
+    background: linear-gradient(90deg, #101828, #162235);
+    text-align: center;
+    padding: 40px 20px;
+  }
+
+  header h1 {
+    color: var(--primary);
+    margin: 0;
+    font-size: 2rem;
+    letter-spacing: 1px;
+  }
+
+  section {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+    background-color: var(--card);
+    border-radius: 8px;
+    border: 1px solid var(--border);
+  }
+
+  h2 {
+    color: var(--primary);
+    margin-top: 30px;
+    margin-bottom: 10px;
+  }
+
+  p {
+    color: var(--muted);
+    margin-bottom: 20px;
+  }
+
+  footer {
+    background-color: #101828;
+    text-align: center;
+    padding: 20px;
+    color: var(--muted);
+    margin-top: 40px;
+  }
+
+  footer a {
+    color: var(--primary);
+    text-decoration: none;
+  }
+
+  footer a:hover {
+    text-decoration: underline;
+  }
+}
+</style>
+</head>
+<body style="background-color: black;">
+<nav>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="investment.html">Investment</a></li>
+    <li><a href="privacy.html">Privacy Policy</a></li>
+  </ul>
+  <div class="menu-icon" onclick="toggleMenu()">☰</div>
+</nav>
+
+<script>
+  function toggleMenu() {
+    document.getElementById('navLinks').classList.toggle('active');
+  }
+</script>
+
+<header>
+  <h1>Finance &amp; Assets Privacy Policy</h1>
+</header>
+
+<section>
+  <h2>Introduction</h2>
+  <p>At Finance &amp; Assets, we value your privacy and are committed to protecting your personal information. This Privacy Policy outlines how we collect, use, store, and safeguard your data when you interact with our website and services.</p>
+
+  <h2>Information We Collect</h2>
+  <p>We may collect personal details such as your name, email address, contact information, and transaction history when you use our platform. In addition, we collect non-personal information like browser type, IP address, and device details to improve your experience.</p>
+
+  <h2>How We Use Your Information</h2>
+  <p>Your information helps us enhance our services, process transactions, and deliver personalized content. We also use it for security verification, fraud prevention, and to comply with legal obligations. Finance &amp; Assets never sells or rents personal data to third parties.</p>
+
+  <h2>Data Protection and Security</h2>
+  <p>We employ advanced encryption, firewalls, and secure server technology to protect your data. Access to your information is limited to authorized personnel who are bound by strict confidentiality agreements. Despite these measures, no online system is entirely immune from risk, and we encourage users to take steps to safeguard their accounts.</p>
+
+  <h2>Your Rights and Choices</h2>
+  <p>You have the right to access, correct, or delete your personal data at any time. You may also opt out of marketing communications by updating your account preferences. For inquiries or to exercise your data rights, please contact our Privacy Officer via the contact page.</p>
+</section>
+
+<footer>
+  <p>&copy; <span id="year"></span> Finance &amp; Assets. All Rights Reserved. |
+    <a href="index.html">Home</a> |
+    <a href="investment.html">Investment</a>
+  </p>
+</footer>
+
+<script>
+  // Automatically update year
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>

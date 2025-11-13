@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | Finance & Assets</title>
+  <link rel="icon" type="image/x-icon" href="latest favicon.jpg">
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+      margin: 0;
+      background-color: black;
+      color: white;
+      line-height: 1.6;
+    }
+
+nav {
+    background-color: #0f172a;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 24px;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  }
+
+
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 26px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav-links li {
+    display: inline-block;
+  }
+
+  .nav-links a {
+    text-decoration: none;
+    color: var(--text);
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 8px 12px;
+    border-radius: 6px;
+    transition: 0.3s;
+  }
+
+  .nav-links a:hover {
+    background-color: var(--hover);
+    color: var(--primary);
+  }
+
+  .menu-icon {
+    display: none;
+    font-size: 1.6rem;
+    cursor: pointer;
+    color: var(--primary);
+  }
+
+  @media (max-width: 768px) {
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      background-color: #111a2c;
+      position: absolute;
+      top: 60px;
+      right: 0;
+      width: 200px;
+      border-radius: 0 0 8px 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+    }
+
+    .nav-links.active {
+      display: flex;
+    }
+
+    .menu-icon {
+      display: block;
+    }
+
+    header {
+      background-color: black;
+      color: greenyellow;
+      text-align: center;
+     /* padding: 2rem 0; */
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1000px;
+      margin: 2rem auto;
+    }
+
+    h2, h4 {
+      color: greenyellow;
+      border-left: 4px solid greenyellow;
+      background-color: black;
+      padding-left: 10px;
+      margin-top: 2rem;
+      font-family: serif;
+      text-align: center;
+      font-family: serif;
+      font-size: xx-large;
+    }
+
+   #ss {
+    border-left: 0;
+   }
+
+    #p1::first-line {
+  color: greenyellow;
+  font-variant: small-caps;
+  font-size: 19px;  
+}
+
+    p {
+      margin-top: 0.5rem;
+      text-align: center;
+      color: white; 
+text-shadow: 2px 2px black; font-size: x-large;
+    }
+
+    .currency-list {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 2rem;
+     padding: 1rem;
+      border-radius: 8px;
+    }
+
+  .volt {
+    align-items: center;
+    margin: 10%;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+
+    .currency-item {
+      text-align: center;
+    }
+
+    .currency-symbol {
+      font-size: 2rem;
+      font-weight: bold;
+      display: block;
+      color: greenyellow;
+    }
+
+
+  a:link {
+    position: sticky;
+      color: greenyellow;
+      text-decoration: none;
+    }
+
+    
+    a:visited {
+      color: greenyellow;
+    }
+
+    
+    a:hover {
+      color: red;
+      text-decoration: underline;
+    }
+
+    
+    a:active {
+      color: orange;
+    }
+        
+
+
+*boxsizing
+/* Create two columns/boxes that floats next to each other */
+nav {
+  float: left;
+  width: 30%;
+  height: 300px; /* only for demonstration, should be removed */
+  background: #ccc;
+  padding: 20px;
+}
+
+/* Style the list inside the menu */
+nav-ul {
+  list-style-type: none;
+  padding: 10%;
+  height: 300%;
+}
+
+.container1 {
+           display: flex;
+           justify-content: center;
+           gap: 20px;
+           box-sizing: border-box;
+        }
+        .container img {
+            max-width: 100%;
+            width: 33%;
+            height: auto;
+            border-radius: 8px;
+            float: left;
+            padding: 10px;
+        }
+
+.dropdown {
+  position: relative;
+  z-index: 1;
+  margin: 10px;
+}
+
+.dropdown-content {
+ border: 2px solid yellowgreen;
+ border-radius: 10px;
+  display: none;
+  position: absolute;
+  background-color: black;
+  min-width: 130px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+  color: white;
+  font-style: italic;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.footer-menu {
+text-align: center;
+}
+
+ footer {
+      background-color:black;
+      color: greenyellow;
+      text-align: center;
+      padding: 1rem 0;
+      margin-top: 3rem;
+    }
+  }
+  </style>
+</head>
+<body style="background-image: url(bkg2.jpg);">
+ 
+ <nav>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="investment.html">Investment</a></li>
+    <li><a href="privacy.html">Privacy Policy</a></li>
+  </ul>
+  <div class="menu-icon" onclick="toggleMenu()" style="color: yellowgreen;">☰</div>
+</nav>
+
+<script>
+  function toggleMenu() {
+    document.getElementById('navLinks').classList.toggle('active');
+  }
+</script>
+  <header>
+    <h1 style="font-family: serif; color: greenyellow;">About Finance & Assets</h1>
+  </header>
+<p  id="p1" style="text-align: center; font-family: serif; font-size: large;"><span style="color: greenyellow;"><span style="color: yellowgreen;">&#x26A1</span> Building Wealth Through Smart Investment Strategies <span>&#x26A1</span></p>
+
+  <div class="container">
+    <h2>1. Who We Are</h2>
+    <p>Finance & Assets is a global investment company dedicated to helping individuals and businesses grow their wealth through intelligent financial management, strategic investment, and digital asset integration.</p>
+
+    <h2>2. Our Mission</h2>
+    <p>Our mission is to empower investors with transparent, secure, and profitable investment opportunities across multiple asset classes, including traditional currencies and digital assets like Bitcoin.</p>
+
+    <h2>3. Our Investment Approach</h2>
+    <p>We adopt a balanced approach that combines financial analytics, market research, and risk management to deliver steady and long-term investment growth for our clients worldwide.</p>
+
+    <h2>4. Global Currencies We Manage</h2>
+    <p>We offer investment opportunities and financial portfolio management in major global currencies and crypto-assets. Explore our active listings below:</p>
+
+    <div class="currency-list">
+      <div class="currency-item">
+        <span class="currency-symbol">€</span>
+        <p>Euro (EUR)</p>
+      </div>
+      <div class="currency-item">
+        <span class="currency-symbol">£</span>
+        <p>Pound Sterling (GBP)</p>
+      </div>
+      <div class="currency-item">
+        <span class="currency-symbol">$</span>
+        <p>US Dollar (USD)</p>
+      </div>
+      <div class="currency-item">
+        <span class="currency-symbol">₿</span>
+        <p>Bitcoin (BTC)</p>
+      </div>
+    </div>
+
+    <h2>5. Why Choose Finance & Assets</h2>
+    <p>Our reputation is built on transparency, trust, and consistent performance. We integrate modern technology with traditional finance to ensure security, reliability, and high return on investment for every client.</p>
+
+    <h2>6. Our Future Vision</h2>
+    <p>We are committed to expanding into emerging financial markets and introducing innovative investment tools to help our clients stay ahead in the evolving world of finance and assets.</p>
+     <div class="container1">
+    <img src="Green voltage.jpg" alt="green voltage" width="100vw">
+      <img src="/imgs/blue voltage.jpg" alt="blue voltage" width="100vw">
+       <img src="Green voltage.jpg" alt="green voltage" width="100vw">
+    </div>
+    </div>
+
+
+<div class="dropdown">
+<h4 style="border: none;">Needs to know &#8615;</h4>
+   <div class="dropdown-content">
+Finance and assets are closely linked concepts that form the foundation of economic and business management. Finance refers to the management of money, investments, and other financial instruments to achieve specific goals, such as growth, stability, or profit. Assets, on the other hand, are valuable resources owned by an individual, company, or organization—such as cash, property, equipment, stocks, or digital currencies like Bitcoin—that can generate income or be converted into cash. Together, finance and assets represent how wealth is created, maintained, and utilized to ensure financial health and sustainable growth.</div>
+</div>
+</div>
+
+
+<footer style="background-color:#0b1a2e; color:#dfe6ed; padding:40px 0; font-family:Arial, sans-serif;">
+  <div style="max-width:1200px; margin:auto; display:flex; flex-wrap:wrap; justify-content:space-between;">
+
+  <!-- Bottom Note -->
+  <div style="text-align:center; margin-top:30px; border-top:1px solid #22344d; padding-top:15px; font-size:14px;">
+    © 2025 Finance & Assets. All Rights Reserved.  
+    <br> Empowering financial growth with trust and innovation.
+  </div>
+</footer>
+</body>
+</html>

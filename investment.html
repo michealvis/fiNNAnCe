@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Finance & Assets | Investment Plans</title>
+<link rel="icon" type="image/x-icon" href="latest favicon.jpg">
+<style>
+  :root {
+    --primary: #ADFF2F; 
+    --bg: #0c121c;
+    --text: #f4f4f4;
+    --muted: #c3c6c9;
+    --card: #131a26;
+    --border: rgba(255,255,255,0.1);
+  }
+
+  body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+  }
+
+ nav {
+    background-color: #0f172a;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 24px;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  }
+
+
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 26px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav-links li {
+    display: inline-block;
+  }
+
+  .nav-links a {
+    text-decoration: none;
+    color: var(--text);
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 8px 12px;
+    border-radius: 6px;
+    transition: 0.3s;
+  }
+
+  .nav-links a:hover {
+    background-color: var(--hover);
+    color: var(--primary);
+  }
+
+  .menu-icon {
+    display: none;
+    font-size: 1.6rem;
+    cursor: pointer;
+    color: var(--primary);
+  }
+
+  @media (max-width: 768px) {
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      background-color: #111a2c;
+      position: absolute;
+      top: 60px;
+      right: 0;
+      width: 200px;
+      border-radius: 0 0 8px 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+    }
+
+    .nav-links.active {
+      display: flex;
+    }
+
+    .menu-icon {
+      display: block;
+    }
+
+  header {
+    background: linear-gradient(90deg, #101828, #162235);
+    text-align: center;
+    padding: 40px 20px;
+  }
+
+  header h1 {
+    color: var(--primary);
+    margin: 0;
+    font-size: 2rem;
+    letter-spacing: 1px;
+  }
+
+  section {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+  }
+
+  h2 {
+    color: var(--primary);
+    margin-bottom: 10px;
+  }
+
+  p {
+    color: white;
+    margin-bottom: 25px;
+    text-shadow: black;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 25px;
+    background: var(--card);
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  th, td {
+    border: 1px solid var(--border);
+    padding: 15px;
+    text-align: center;
+  }
+
+  th {
+    background-color: #192434;
+    color: var(--primary);
+    font-size: 1rem;
+  }
+
+  tr:nth-child(even) {
+    background-color: #111923;
+  }
+
+  tr:hover {
+    background-color: #1a2636;
+    transition: 0.3s;
+  }
+
+.signup-container {
+  border: 2px solid white;
+  border-radius: 20px;
+  margin: auto;
+    background-image: url(signup\ backg.jpg); align-items: center;
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    padding: 40px;
+    width: 320px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    color: white;
+    align-items: center;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    font-weight: 600;
+  }
+
+  input, select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 6px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    font-size: 0.95em;
+  }
+
+  input[type="date"],
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  select {
+    background-color: #f1f1f1;
+  }
+
+  input:focus, select:focus {
+    border: 2px solid blue;
+  }
+
+  .form-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+  }
+
+  .form-row select,
+  .form-row input[type="date"] {
+    width: 48%;
+  }
+
+  button {
+    width: 100%;
+    padding: 12px;
+    background-color: yellowgreen;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: 0.3s ease;
+  }
+
+
+  button:hover {
+    background-color: green;
+  }
+
+  ::placeholder {
+    color: #555;
+  }
+
+  footer {
+    background-color: #101828;
+    text-align: center;
+    padding: 20px;
+    color: var(--muted);
+    margin-top: 40px;
+  }
+
+  footer a {
+    color: var(--primary);
+    text-decoration: none;
+  }
+}
+</style>
+</head>
+<body style="background-image: url(background\ for\ invest.jpg);">
+
+<nav>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="investment.html">Investment</a></li>
+    <li><a href="privacy.html">Privacy Policy</a></li>
+  </ul>
+  <div class="menu-icon" onclick="toggleMenu()">☰</div>
+</nav>
+
+<script>
+  function toggleMenu() {
+    document.getElementById('navLinks').classList.toggle('active');
+  }
+</script>
+
+<header>
+  <h1>Finance & Assets Investment Opportunities</h1>
+</header>
+
+<section>
+  <h2>Introduction to Smart Investing</h2>
+  <p>Welcome to Finance & Assets — where your financial growth begins. Our investment platform provides high-yield returns through a secure and transparent process designed for both new and experienced investors.</p>
+
+  <h2>How It Works</h2>
+  <p>Invest a minimum of $100 and watch your investment multiply in just 24 hours. Our automated trading algorithms and diversified asset pools ensure rapid and reliable profit generation with minimal risk.</p>
+
+  <h2>Benefits of Investing with Us</h2>
+  <p>We offer 24/7 customer support, fast withdrawals, and a guaranteed return policy on selected plans. Our platform uses modern blockchain security to protect your data and transactions.</p>
+
+  <h2>Investment Growth Plan</h2>
+  <p>The table below outlines how your investment grows exponentially after every 24 hours. The higher you invest, the higher your return potential becomes — making wealth accumulation simple and attainable.</p>
+
+  <!-- Investment Table -->
+  <table>
+    <thead>
+      <tr>
+        <th>Investment Amount ($)</th>
+        <th>Duration</th>
+        <th>Return After 24 Hours ($)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>$100</td>
+        <td>24 Hours</td>
+        <td>$1,000</td>
+      </tr>
+      <tr>
+        <td>$200</td>
+        <td>24 Hours</td>
+        <td>$2,000</td>
+      </tr>
+      <tr>
+        <td>$500</td>
+        <td>24 Hours</td>
+        <td>$5,000</td>
+      </tr>
+      <tr>
+        <td>$1,000</td>
+        <td>24 Hours</td>
+        <td>$10,000</td>
+      </tr>
+      <tr>
+        <td>$2,000</td>
+        <td>24 Hours</td>
+        <td>$20,000</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>Getting Started</h2>
+  <p>To begin investing, simply create an account, choose your investment plan, and deposit your desired amount. Within 24 hours, your earnings will be automatically added to your portfolio. Start now and see how your assets grow with Finance & Assets.</p>
+</section>
+
+<div class="signup-container">
+    <form action="#" method="post">
+      <label for="fname">First Name</label>
+      <input type="text" id="fname" name="fname" placeholder="Enter your first name" required><br><br>
+
+      <label for="lname">Last Name</label>
+      <input type="text" id="lname" name="lname" placeholder="Enter your last name" required><br><br>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" placeholder="Enter your email" required><br><br>
+
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" placeholder="Create a password" required><br><br>
+
+      <label for="country">Country:</label>
+<select id="country" name="country">
+  <option value="">Country</option>
+  <option value="Afghanistan">Afghanistan</option>
+  <option value="Albania">Albania</option>
+  <option value="Algeria">Algeria</option>
+  <option value="Andorra">Andorra</option>
+  <option value="Angola">Angola</option>
+  <option value="Argentina">Argentina</option>
+  <option value="Australia">Australia</option>
+  <option value="Brazil">Brazil</option>
+  <option value="Canada">Canada</option>
+  <option value="China">China</option>
+  <option value="France">France</option>
+  <option value="Germany">Germany</option>
+  <option value="India">India</option>
+  <option value="Italy">Italy</option>
+  <option value="Japan">Japan</option>
+  <option value="Mexico">Mexico</option>
+  <option value="Nigeria">Nigeria</option>
+  <option value="South Africa">South Africa</option>
+  <option value="United Kingdom">United Kingdom</option>
+  <option value="United States">United States</option>
+</select>
+
+<label for="dob">Date of Birth:</label>
+<input type="date" id="dob" name="dob">
+      <button type="submit">Sign Up</button>
+    </form>
+</div>
+
+
+<footer>
+  <p>&copy; <span id="year"></span> Finance & Assets. All rights reserved. </p>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
